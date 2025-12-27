@@ -8,7 +8,8 @@ class CurrentState:
         rc5_pool,
         rc4_pool,
         rc3_pool,
-        init_ticket_cnt=0,
+        init_sprout_ticket_cnt=0,
+        init_sky_ticket_cnt=0,
         init_disk_cnt=0,
     ):
         self.frag_cnt = init_frag_cnt
@@ -18,12 +19,13 @@ class CurrentState:
         self.rc5_pool = rc5_pool
         self.rc4_pool = rc4_pool
         self.rc3_pool = rc3_pool
-        self.ticket_cnt = init_ticket_cnt
+        self.sprout_ticket_cnt = init_sprout_ticket_cnt
+        self.sky_ticket_cnt = init_sky_ticket_cnt
         self.disk_cnt = init_disk_cnt
 
     def __str__(self):
         return (
-            f"frag_cnt: {self.frag_cnt}, ticket_cnt: {self.ticket_cnt}, disk_cnt: {self.disk_cnt}, cert_cnt: {self.cert_cnt}\n"
+            f"frag_cnt: {self.frag_cnt}, sprout_ticket_cnt: {self.sprout_ticket_cnt}, sky_ticket_cnt: {self.sky_ticket_cnt}, disk_cnt: {self.disk_cnt}, cert_cnt: {self.cert_cnt}\n"
             + f"5★: {self.char5_pool}\n4★: {self.char4_pool}\n"
             + f"5★RC: {self.rc5_pool}\n4★RC: {self.rc4_pool}\n3★RC: {self.rc3_pool}"
         )
